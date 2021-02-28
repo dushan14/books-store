@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  bookstore_web:
+    build: .
+    image: bookstore:latest
+    command: python manage.py runserver -h 0.0.0.0 -p 5000
+    ports:
+      - "8080:5000"
